@@ -51,7 +51,7 @@ PRINCIPIOS Y BUENAS PRÁCTICAS
 
 Problem 1: Full name formatter (name + initials)
 
-Descripción (en español):
+Descripción:
 Este problema lee el nombre completo de una persona
 en una sola cadena, normaliza los espacios y las
 mayúsculas/minúsculas y luego imprime el nombre
@@ -112,7 +112,7 @@ else:
 
 Problem 2: Simple email validator (structure + domain)
 
-Descripción (en español):
+Descripción:
 Este problema valida si una dirección de correo tiene
 una estructura básica correcta: exactamente un '@',
 al menos un punto después del '@' y que no contenga
@@ -141,6 +141,7 @@ Casos de prueba:
 3) Error: "invalid@@mail" o "noatsymbol.com" ->
     Valid email: false.
 """
+# Email validator
 
 email_text = input("Enter your email address: ")
 email_text = email_text.strip()
@@ -166,7 +167,7 @@ else:
 
 Problem 3: Palindrome checker (ignoring spaces and case)
 
-Descripción (en español):
+Descripción:
 Este problema lee una frase de texto y determina si es
 un palíndromo, es decir, si se lee igual de izquierda
 a derecha y de derecha a izquierda cuando se ignoran
@@ -191,7 +192,7 @@ Casos de prueba:
 3) Error: "  " o solo dos letras ->
     Is palindrome: false por ser demasiado corta.
 """
-
+# palindrome
 phrase = input("Enter a phrase: ")
 normalized_phrase = phrase.strip().lower().replace(" ", "")
 
@@ -208,7 +209,7 @@ else:
 
 Problem 4: Sentence word stats (lengths and first/last word)
 
-Descripción (en español):
+Descripción:
 Este problema lee una oración, elimina espacios al
 inicio y al final, separa el texto en palabras y
 muestra estadísticas como el número total de
@@ -268,7 +269,7 @@ else:
 
 Problem 5: Password strength classifier
 
-Descripción (en español):
+Descripción:
 Este problema lee una contraseña y la clasifica como
 "weak", "medium" o "strong" según reglas que
 combinan la longitud y la presencia de diferentes
@@ -304,7 +305,7 @@ Casos de prueba:
 3) Error: "     " o "aaaaaaa" -> contraseña vacía o
      demasiado simple -> weak / mensaje de error.
 """
-
+# Calificar contraseña
 password_input = input("Enter your password: ")
 password_input = password_input.strip()
 
@@ -347,7 +348,7 @@ else:
 
 Problem 6: Product label formatter (fixed-width text)
 
-Descripción (en español):
+Descripción:
 Este problema lee el nombre de un producto y su
 precio y genera una etiqueta en una sola línea con
 el formato "Product: <NAME> | Price: $<PRICE>". La
@@ -380,7 +381,7 @@ Casos de prueba:
 3) Error: price_value="-10" o "abc" -> mensaje de
      error y sin etiqueta válida.
 """
-
+#Product label formatter
 product_name = input("Enter product name: ").strip()
 price_value = input("Enter product price: ").strip()
 

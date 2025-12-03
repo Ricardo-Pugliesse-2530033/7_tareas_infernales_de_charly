@@ -293,7 +293,7 @@ Casos de prueba:
 2) Borde: income = 8000, debt = 3200, score = 650 -> debt_ratio = 0.4.
 3) Error: income = 0 o debt < 0 -> mensaje de error.
 """
-
+#   Loan eligibility (Elegibilidad para préstamo)
 monthly_income_text = input("Enter your monthly income: ")
 monthly_debt_text = input("Enter your monthly debt payments: ")
 credit_score_text = input("Enter your credit score: ")
