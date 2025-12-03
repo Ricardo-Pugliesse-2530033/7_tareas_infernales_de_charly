@@ -1,52 +1,90 @@
-# Portada
-# Name: Ricardo Pugliesse
-# Student ID: 2530033
-# Group: GDS0352
 
-# Executive Summary
 """
-Lists, tuples, and dictionaries are fundamental collection types in Python. Lists are ordered and mutable, allowing elements to be added, removed, or changed. Tuples are ordered and immutable, ideal for fixed data like coordinates or dates. Dictionaries store key-value pairs, enabling fast lookups and flexible data association. This document covers six practical problems, each with a description, inputs, outputs, validations, and test cases, demonstrating the use of lists, tuples, and dictionaries for cataloging, searching, updating, and aggregating data in real-world scenarios.
-"""
+PORTADA
 
-# Principles and Best Practices
-"""
-- Use lists when you need to frequently add or remove elements.
-- Use tuples for data that should not change (e.g., coordinates, fixed settings).
-- Use dictionaries for fast lookups by key (e.g., name, id, code).
-- Avoid modifying a list while iterating over it unless you know exactly what you are doing.
-- Use descriptive key names in dictionaries (e.g., "name", "age", "price").
-- Write readable code and clear messages for the user.
+Nombre: Ricardo Martin Pugliesse Macías
+Matrícula             : 2530033
+Grupo                 : IM 1-2
+
+
+RESUMEN EJECUTIVO
+
+En Python, las listas, tuplas y diccionarios son
+estructuras fundamentales para trabajar con
+colecciones de datos. Las listas son ordenadas y
+mutables, por lo que permiten agregar, eliminar o
+modificar elementos con facilidad. Las tuplas son
+ordenadas pero inmutables, ideales para datos fijos
+como coordenadas o configuraciones. Los diccionarios
+almacenan pares clave-valor y permiten búsquedas
+rápidas por clave, lo que resulta muy útil en
+catálogos y registros. Este documento presenta seis
+problemas prácticos con descripción, entradas,
+salidas, validaciones y casos de prueba, mostrando
+el uso de listas, tuplas y diccionarios en contextos
+reales.
+
+
+PRINCIPIOS Y BUENAS PRÁCTICAS
+
+- Usar listas cuando se necesite agregar o eliminar
+    elementos con frecuencia.
+- Usar tuplas para datos que no deben cambiar, como
+    coordenadas, fechas o configuraciones fijas.
+- Usar diccionarios cuando se requiera buscar
+    información por una clave (por ejemplo, nombre,
+    id o código).
+- Evitar modificar una lista mientras se recorre con
+    un for, a menos que se tenga claro el efecto.
+- Usar nombres de claves descriptivos en los
+    diccionarios (por ejemplo, "name", "age",
+    "price").
+- Escribir código legible y mensajes claros para el
+    usuario, manteniendo las variables y salidas en
+    inglés según la consigna.
 """
 
 # Problem 1: Shopping list basics (list operations)
 """
-Description:
-Works with a list of products (strings). The program:
-1) Creates an initial list of products.
-2) Allows adding a new product to the end.
-3) Shows the total number of items in the list.
-4) Checks if a specific product is in the list (boolean is_in_list).
+Descripción:
+Trabaja con una lista de productos (strings). El
+programa: 1) crea una lista inicial de productos,
+2) permite agregar un nuevo producto al final,
+3) muestra la cantidad total de elementos en la
+lista y 4) verifica si un producto específico está
+en la lista mediante un booleano is_in_list.
 
-Inputs:
-- initial_items_text (string; e.g., "apple,banana,orange").
-- new_item (string; product to add).
-- search_item (string; product to search).
+Entradas:
+- initial_items_text (string; por ejemplo,
+    "apple,banana,orange").
+- new_item (string; producto a agregar).
+- search_item (string; producto a buscar).
 
-Outputs:
-- "Items list:" <items_list>
-- "Total items:" <len_list>
-- "Found item:" true|false
+Salidas:
+- "Items list:" <items_list>.
+- "Total items:" <len_list>.
+- "Found item:" true|false.
 
-Validations:
-- initial_items_text not empty after strip().
-- Split the string by commas and strip spaces from each element.
-- new_item and search_item not empty.
-- Handle empty initial list if decided (documented below).
+Validaciones:
+- initial_items_text no debe estar vacío después de
+    strip().
+- Separar la cadena por comas y eliminar espacios
+    extra en cada elemento.
+- new_item y search_item no deben estar vacíos.
+- Se puede manejar el caso de lista inicial vacía
+    (como se documenta en el código).
 
-Test cases:
-1) Normal: initial_items_text="apple,banana,orange", new_item="grape", search_item="banana" -> Items list: ['apple', 'banana', 'orange', 'grape'], Total items: 4, Found item: true
-2) Border: initial_items_text="", new_item="apple", search_item="apple" -> Items list: ['apple'], Total items: 1, Found item: true
-3) Error: initial_items_text="apple,banana", new_item="", search_item="banana" -> Error: invalid input
+Casos de prueba:
+1) Normal: initial_items_text="apple,banana,orange",
+     new_item="grape", search_item="banana" ->
+     Items list: ['apple', 'banana', 'orange',
+     'grape'], Total items: 4, Found item: true.
+2) Borde: initial_items_text="", new_item="apple",
+     search_item="apple" -> Items list: ['apple'],
+     Total items: 1, Found item: true.
+3) Error: initial_items_text="apple,banana",
+     new_item="", search_item="banana" ->
+     Error: invalid input.
 """
 def problem1():
     print("--- Problem 1: Shopping list basics (list operations) ---")
@@ -71,25 +109,34 @@ problem1()
 
 # Problem 2: Points and distances with tuples
 """
-Description:
-Uses tuples to represent two points in 2D: (x1, y1) and (x2, y2). Calculates the Euclidean distance and the midpoint.
+Descripción:
+Usa tuplas para representar dos puntos en un plano
+2D: (x1, y1) y (x2, y2). El programa calcula la
+distancia euclidiana entre ambos puntos y el punto
+medio (midpoint) entre ellos.
 
-Inputs:
-- x1, y1, x2, y2 (float; coordinates).
+Entradas:
+- x1, y1, x2, y2 (float; coordenadas de los
+  puntos).
 
-Outputs:
-- "Point A:" (x1, y1)
-- "Point B:" (x2, y2)
-- "Distance:" <distance>
-- "Midpoint:" (mx, my)
+Salidas:
+- "Point A:" (x1, y1).
+- "Point B:" (x2, y2).
+- "Distance:" <distance>.
+- "Midpoint:" (mx, my).
 
-Validations:
-- All four inputs can be converted to float.
+Validaciones:
+- Las cuatro entradas deben poder convertirse a
+  float.
 
-Test cases:
-1) Normal: x1=0, y1=0, x2=3, y2=4 -> Point A: (0.0, 0.0), Point B: (3.0, 4.0), Distance: 5.0, Midpoint: (1.5, 2.0)
-2) Border: x1=1, y1=1, x2=1, y2=1 -> Point A: (1.0, 1.0), Point B: (1.0, 1.0), Distance: 0.0, Midpoint: (1.0, 1.0)
-3) Error: x1="a", y1=0, x2=3, y2=4 -> Error: invalid input
+Casos de prueba:
+1) Normal: x1=0, y1=0, x2=3, y2=4 -> Point A:
+    (0.0, 0.0), Point B: (3.0, 4.0), Distance:
+    5.0, Midpoint: (1.5, 2.0).
+2) Borde: x1=1, y1=1, x2=1, y2=1 -> Distance:
+    0.0, Midpoint: (1.0, 1.0).
+3) Error: x1="a", y1=0, x2=3, y2=4 ->
+    Error: invalid input.
 """
 def problem2():
     print("\n--- Problem 2: Points and distances with tuples ---")
@@ -116,30 +163,38 @@ problem2()
 
 # Problem 3: Product catalog with dictionary
 """
-Description:
-Manages a product catalog using a dictionary (product name -> unit price). Calculates total price for a given product and quantity.
+Descripción:
+Administra un catálogo de productos usando un
+diccionario (nombre del producto -> precio por
+unidad). Calcula el precio total para un producto
+determinado y una cantidad dada.
 
-Inputs:
+Entradas:
 - product_name (string).
 - quantity (int).
 
-Outputs:
-- If product exists:
-  - "Unit price:" <unit_price>
-  - "Quantity:" <quantity>
-  - "Total:" <total_price>
-- If not:
-  - "Error: product not found"
+Salidas:
+- Si el producto existe:
+    - "Unit price:" <unit_price>
+    - "Quantity:" <quantity>
+    - "Total:" <total_price>
+- Si no existe:
+    - "Error: product not found".
 
-Validations:
-- quantity > 0
-- product_name not empty after strip()
-- Check if product_name is in the dictionary.
+Validaciones:
+- quantity > 0.
+- product_name no debe estar vacío después de
+    aplicar strip().
+- Verificar que product_name esté en el
+    diccionario.
 
-Test cases:
-1) Normal: product_name="apple", quantity=2 -> Unit price: 10.0, Quantity: 2, Total: 20.0
-2) Border: product_name="banana", quantity=1 -> Unit price: 5.0, Quantity: 1, Total: 5.0
-3) Error: product_name="pear", quantity=2 -> Error: product not found
+Casos de prueba:
+1) Normal: product_name="apple", quantity=2 ->
+     Unit price: 10.0, Quantity: 2, Total: 20.0.
+2) Borde: product_name="banana", quantity=1 ->
+     Unit price: 5.0, Quantity: 1, Total: 5.0.
+3) Error: product_name="pear", quantity=2 ->
+     Error: product not found.
 """
 def problem3():
     print("\n--- Problem 3: Product catalog with dictionary ---")
@@ -171,29 +226,37 @@ problem3()
 
 # Problem 4: Student grades with dict and list
 """
-Description:
-Manages student grades using a dictionary (student name -> list of grades). Calculates average and pass status.
+Descripción:
+Administra calificaciones de estudiantes usando un
+diccionario (student name -> lista de calificaciones).
+Calcula el promedio y el estado de aprobación.
 
-Inputs:
+Entradas:
 - student_name (string).
 
-Outputs:
-- If student exists:
-  - "Grades:" <grades_list>
-  - "Average:" <average>
-  - "Passed:" true|false
-- If not:
-  - "Error: student not found"
+Salidas:
+- Si el estudiante existe:
+    - "Grades:" <grades_list>.
+    - "Average:" <average>.
+    - "Passed:" true|false.
+- Si no existe:
+    - "Error: student not found".
 
-Validations:
-- student_name not empty after strip().
-- Check if student_name is a key in the dictionary.
-- Check that the grades list is not empty before calculating average.
+Validaciones:
+- student_name no debe estar vacío después de
+    aplicar strip().
+- Verificar que student_name sea una clave en el
+    diccionario.
+- Verificar que la lista de calificaciones no esté
+    vacía antes de calcular el promedio.
 
-Test cases:
-1) Normal: student_name="Alice" -> Grades: [90, 85, 80], Average: 85.0, Passed: true
-2) Border: student_name="Bob" -> Grades: [70], Average: 70.0, Passed: true
-3) Error: student_name="Eve" -> Error: student not found
+Casos de prueba:
+1) Normal: student_name="Alice" -> Grades:
+     [90, 85, 80], Average: 85.0, Passed: true.
+2) Borde: student_name="Bob" -> Grades: [70],
+     Average: 70.0, Passed: true.
+3) Error: student_name="Eve" ->
+     Error: student not found.
 """
 def problem4():
     print("\n--- Problem 4: Student grades with dict and list ---")
@@ -219,26 +282,38 @@ problem4()
 
 # Problem 5: Word frequency counter (list + dict)
 """
-Description:
-Counts the frequency of each word in a sentence using a list and a dictionary. Shows the frequency dictionary and the most common word.
+Descripción:
+Cuenta la frecuencia de cada palabra en una
+oración usando una lista y un diccionario. Muestra
+el diccionario de frecuencias y la palabra más
+común.
 
-Inputs:
+Entradas:
 - sentence (string).
 
-Outputs:
-- "Words list:" <words_list>
-- "Frequencies:" <freq_dict>
-- "Most common word:" <word>
+Salidas:
+- "Words list:" <words_list>.
+- "Frequencies:" <freq_dict>.
+- "Most common word:" <word>.
 
-Validations:
-- sentence not empty after strip().
-- Handle simple punctuation by replacing commas and periods with spaces.
-- Check that the words list is not empty.
+Validaciones:
+- sentence no debe estar vacío después de
+    aplicar strip().
+- Manejar puntuación simple reemplazando comas y
+    puntos por espacios.
+- Verificar que la lista de palabras no esté
+    vacía.
 
-Test cases:
-1) Normal: sentence="apple banana apple orange" -> Words list: ['apple', 'banana', 'apple', 'orange'], Frequencies: {'apple': 2, 'banana': 1, 'orange': 1}, Most common word: apple
-2) Border: sentence="apple" -> Words list: ['apple'], Frequencies: {'apple': 1}, Most common word: apple
-3) Error: sentence="" -> Error: invalid input
+Casos de prueba:
+1) Normal: sentence="apple banana apple orange" ->
+     Words list: ['apple', 'banana', 'apple',
+     'orange'], Frequencies: {'apple': 2,
+     'banana': 1, 'orange': 1}, Most common word:
+     apple.
+2) Borde: sentence="apple" -> Words list:
+     ['apple'], Frequencies: {'apple': 1},
+     Most common word: apple.
+3) Error: sentence="" -> Error: invalid input.
 """
 def problem5():
     print("\n--- Problem 5: Word frequency counter (list + dict) ---")
@@ -264,34 +339,42 @@ problem5()
 
 # Problem 6: Simple contact book (dictionary CRUD)
 """
-Description:
-Implements a mini contact book using a dictionary (name -> phone). Supports ADD, SEARCH, and DELETE actions.
+Descripción:
+Implementa una mini libreta de contactos usando un
+diccionario (name -> phone). Soporta las acciones
+ADD, SEARCH y DELETE.
 
-Inputs:
+Entradas:
 - action_text (string; "ADD", "SEARCH", "DELETE").
-- name (string; depends on action).
-- phone (string; only for "ADD").
+- name (string; depende de la acción).
+- phone (string; solo para "ADD").
 
-Outputs:
-- For "ADD":
-  - "Contact saved:" name, phone
-- For "SEARCH":
-  - If exists: "Phone:" <phone>
-  - If not: "Error: contact not found"
-- For "DELETE":
-  - If exists: "Contact deleted:" name
-  - If not: "Error: contact not found"
+Salidas:
+- Para "ADD":
+    - "Contact saved:" name, phone.
+- Para "SEARCH":
+    - Si existe: "Phone:" <phone>.
+    - Si no: "Error: contact not found".
+- Para "DELETE":
+    - Si existe: "Contact deleted:" name.
+    - Si no: "Error: contact not found".
 
-Validations:
-- Normalize action_text to uppercase.
-- Check that action_text is one of the three valid options.
-- name not empty after strip().
-- For "ADD": phone not empty after strip().
+Validaciones:
+- Normalizar action_text a mayúsculas.
+- Verificar que action_text sea una de las tres
+    opciones válidas.
+- name no debe estar vacío después de aplicar
+    strip().
+- Para "ADD": phone no debe estar vacío después
+    de aplicar strip().
 
-Test cases:
-1) Normal: action_text="ADD", name="Alice", phone="123" -> Contact saved: Alice, 123
-2) Border: action_text="SEARCH", name="Bob" -> Phone: 456
-3) Error: action_text="DELETE", name="Eve" -> Error: contact not found
+Casos de prueba:
+1) Normal: action_text="ADD", name="Alice",
+     phone="123" -> Contact saved: Alice, 123.
+2) Borde: action_text="SEARCH", name="Bob" ->
+     Phone: 456.
+3) Error: action_text="DELETE", name="Eve" ->
+     Error: contact not found.
 """
 def problem6():
     print("\n--- Problem 6: Simple contact book (dictionary CRUD) ---")
@@ -344,4 +427,5 @@ References:
 # GitHub Repository
 """
 https://github.com/Ricardo-Pugliesse-2530033/7_tareas_infernales_de_charly
+
 """
