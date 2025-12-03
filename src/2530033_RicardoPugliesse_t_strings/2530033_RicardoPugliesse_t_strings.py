@@ -3,9 +3,7 @@
 
 Nombre del estudiante : Ricardo Martin Pugliesse Macías
 Matrícula             : 2530033
-Grupo                 : (agrega aquí tu grupo oficial)
-Materia               : Introducción a la Programación con Python
-Actividad             : Manejo de cadenas de texto (t_strings)
+Grupo                 : IM 1-2 
 Nombre del archivo    : 2530033_PugliesseRicardo_t_strings.py
 
 
