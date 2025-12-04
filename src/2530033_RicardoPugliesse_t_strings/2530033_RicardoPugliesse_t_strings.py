@@ -431,14 +431,15 @@ un texto sin modificar el valor original.
 
 REFERENCIAS
 
-1) Documentación oficial de Python - Built-in Types:
-   Text Sequence Type — str.
-2) Tutorial de Python - Sección de Strings,
-   docs.python.org.
-3) Sweigart, A. "Automate the Boring Stuff with
-   Python", No Starch Press.
-4) TutorialsPoint - Tutorial de Python Strings.
-5) Real Python - "Working with Strings in Python".
+1. Documentación oficial de Python - Tipo de Secuencia de Texto (str) https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+
+2. Tutorial oficial de Python - Cadenas https://docs.python.org/3/tutorial/introduction.html#strings
+
+3. Real Python - Trabajar con Cadenas en Python https://realpython.com/python-strings/
+
+4. GeeksforGeeks - Métodos de String en Python https://www.geeksforgeeks.org/string-methods-python/
+
+5. Tutorialspoint - Operaciones con Cadenas en Python https://www.tutorialspoint.com/python/python_strings_operations.htm
 
 
 REPOSITORIO DE GITHUB
