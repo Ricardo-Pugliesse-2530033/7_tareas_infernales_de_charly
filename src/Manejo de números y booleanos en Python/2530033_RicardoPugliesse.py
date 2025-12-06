@@ -394,15 +394,15 @@ la base para resolver problemas más complejos.
 
 REFERENCIAS
 
-1) Python documentation - Built-in Types:
-   Numeric Types — int, float, complex.
-2) Python documentation - Boolean type — bool.
-3) Python Tutorial - Numbers and Booleans,
-   docs.python.org.
-4) Sweigart, A. "Automate the Boring Stuff with
-   Python", capítulos de operadores y lógica.
-5) Tutoriales y apuntes de clase sobre validación
-   de datos numéricos y estructuras de decisión.
+1. Documentación oficial de Python - Tipos Numéricos (int, float, complex) https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
+
+2. Tutorial oficial de Python - La Verdad en los Valores (Booleanos) https://docs.python.org/3/tutorial/datastructures.html#truth-value-testing
+
+3. Real Python - Tipos de Datos Numéricos en Python https://realpython.com/python-data-types/
+
+4. GeeksforGeeks - Operadores Lógicos en Python https://www.geeksforgeeks.org/python-logical-operators/
+
+5. Tutorialspoint - Tipos de Datos Numéricos en Python https://www.tutorialspoint.com/python/python_numbers.htm
 
 
 REPOSITORIO DE GITHUB

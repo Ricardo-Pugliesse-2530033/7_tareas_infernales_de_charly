@@ -149,7 +149,7 @@ def mostrar_menu():
 
 
 def leer_opcion():
-	opcion = input("Selecciona una opción (0-5): ").strip()
+	opcion = input("Please select an option (0-5): ").strip()
 	if opcion not in {"0", "1", "2", "3", "4", "5"}:
 		print("Error: invalid input")
 		return None
@@ -157,7 +157,7 @@ def leer_opcion():
 
 
 def leer_id():
-	item_id = input("Ingresa el id del item: ").strip()
+	item_id = input("Enter the item id: ").strip()
 	if not item_id:
 		print("Error: invalid input")
 		return None
@@ -177,15 +177,15 @@ def leer_datos_item(include_id=True):
 		if item_id is None:
 			return None
 
-	name = input("Ingresa el nombre del item: ").strip()
+	name = input("Enter the item name: ").strip()
 	if not name:
 		print("Error: invalid input")
 		return None
 
 	try:
-		price_str = input("Ingresa el precio (>= 0.0): ").strip()
+		price_str = input("Enter the price (>= 0.0): ").strip()
 		price = float(price_str)
-		quantity_str = input("Ingresa la cantidad (>= 0): ").strip()
+		quantity_str = input("Enter the quantity (>= 0): ").strip()
 		quantity = int(quantity_str)
 	except ValueError:
 		print("Error: invalid input")
@@ -210,7 +210,7 @@ def main():
 			continue
 
 		if opcion == "0":
-			print("Saliendo del programa...")
+			print("Exiting the program...")
 			break
 
 		if opcion == "1":  # Create item
